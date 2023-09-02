@@ -13,10 +13,10 @@ table {
   
   td, th {
     border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+    text-align: center;
   }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+
+footer {
+    position: absolute; 
+    bottom: 6px;
+}
