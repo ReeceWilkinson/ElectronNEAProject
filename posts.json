@@ -1,0 +1,24 @@
+{
+    "posts":[
+        {
+            "id": 1,
+            "title": "My friend will",
+            "text": "My friend will is a really smelly guy and needs a bath. :)",
+            "year": "2023",
+            "month": "09",
+            "day": "04",
+            "time": "22:32",
+            "userPosted": "OriginOfBruh"
+        },
+        {
+            "id": 2,
+            "title": "My friend harry",
+            "text": "My friend harry is a really cool guy and needs a girlfriend. :)",
+            "year": "2023",
+            "month": "09",
+            "day": "04",
+            "time": "22:38",
+            "userPosted": "OriginOfBruh"
+        }
+    ]
+}

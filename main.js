@@ -1,6 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
+let userAccounts = require('./users.json');
+let userPosts = require('./posts.json')
+
 const createWindow = () => {
   const win = new BrowserWindow({
     autoHideMenuBar: true,
@@ -8,6 +11,7 @@ const createWindow = () => {
     height: 800,
     resizable: false,
     center: true,
+    
     webPreferences: {
         preload: path.join(__dirname, 'preload.js')
       }
@@ -25,6 +29,7 @@ app.whenReady().then(() => {
           createWindow()
         }
       })
+      
 })
 
 app.on('window-all-closed', () => {

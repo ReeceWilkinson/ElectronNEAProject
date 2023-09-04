@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <title>Electro</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./renderer.js"></script>
   </head>
   <body>
+    <script type="module" src="./index.js"></script>
     <div class="topnav">
       <table>
         <tr>
-          <th style="width: 100px; height: 50px;align-self: center;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
+          <th style="width: 100px; height: 50px;align-self: center;padding-left: 5px;padding-top: 5px;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
           <th>
             <div class="search-container">
                 <form action="/action_page.php">
@@ -18,24 +20,23 @@
                 </form>
             </div>
           </th>
-          <th style="width: 200px; height: 50px;"><button><a href="loginPage.html">Login Button</a></button></th>
+          <th style="width: 200px; height: 50px;"><button class="login-button" id="button"><a href="loginPage.html">Login Button</a></button></th>
         </tr>
       </table>
     </div>
     <div class="main-section">
       <table>
         <tr>
-          <th style="width: 800px; height: 645px;">Main Section</th>
+          <th style="width: 800px; height: 640px;">Main Section</th>
         </tr>
       </table>
     </div>
     <div class="footer">
       <table>
         <tr>
-          <th style="width: 974px;height: 50px;">Footer</th>
+          <th style="width: 974px;height: 50px;"><p style="float: left;padding-left: 15px;">Copyright © 2023 Reece Wilkinson Inc. All rights reserved.</p><p style="float: right;padding-right: 15px;">United Kingdom</p></th>
         </tr>
       </table>
     </div>
   </body>
-  <script src="./renderer.js"></script>
 </html>

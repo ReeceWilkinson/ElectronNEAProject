@@ -1,0 +1,11 @@
+
+{
+    "users": [ 
+        {
+    "id" : 1,
+    "Fullname" : "Reece Wilkinson",
+    "Username": "OriginOfBruh",
+    "password": "ExamplePassword"
+        }
+    ]
+}
