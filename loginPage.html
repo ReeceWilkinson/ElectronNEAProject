@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <title>Electro</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./renderer.js"></script>
   </head>
   <body>
+    <script type="module" src="./index.js"></script>
     <div class="topnav">
       <table>
         <tr>
-          <th style="width: 100px; height: 50px;align-self: center;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
+          <th style="width: 100px; height: 50px;align-self: center;padding-left: 5px;padding-top: 5px;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
           <th>
             <div class="search-container">
                 <form action="/action_page.php">
@@ -18,14 +20,14 @@
                 </form>
             </div>
           </th>
-          <th style="width: 200px; height: 50px;"><button><a href="index.html">Cancel</a></button></th>
+          <th style="width: 200px; height: 50px;"><button class="login-button" id="button"><a href="loginPage.html">cancel</a></button></th>
         </tr>
       </table>
     </div>
     <div class="main-section">
       <table>
         <tr>
-          <th style="width: 800px; height: 645px;">Login Section</th>
+          <th style="width: 800px; height: 640px;">login section</th>
         </tr>
       </table>
     </div>
@@ -37,5 +39,4 @@
       </table>
     </div>
   </body>
-  <script src="./renderer.js"></script>
 </html>
