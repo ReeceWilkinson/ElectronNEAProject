@@ -12,13 +12,16 @@ table {
   }
   
   td, th {
-    border: 1px solid #dddddd;
     text-align: center;
   }
 
 footer {
     position: absolute; 
     bottom: 6px;
+}
+
+.topnav {
+  background-color: #666666;
 }
 
 .topnav input[type=text] {
@@ -35,4 +38,13 @@ footer {
 
 .topnav .search-container button:hover {
   background: #ccc;
+}
+
+.main-section {
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  background-color: #666666;
 }

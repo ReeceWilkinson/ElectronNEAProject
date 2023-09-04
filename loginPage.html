@@ -6,36 +6,36 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header>
+    <div class="topnav">
       <table>
         <tr>
-          <th style="width: 100px; height: 50px;align-items: center;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
+          <th style="width: 100px; height: 50px;align-self: center;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
           <th>
             <div class="search-container">
                 <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"></button>
+                  <button type="submit" style="float: right;"><img src="assets/searchIcon.png" alt="search icon magnifying glass" width="43px" height="43px"></button>
+                  <input type="text" placeholder="Search.." name="search" style="width: 580px;float: right; height: 48px;">
                 </form>
             </div>
           </th>
-          <th style="width: 200px; height: 50px"><button><a href="index.html">Cancel</a></button></th>
+          <th style="width: 200px; height: 50px;"><button><a href="index.html">Cancel</a></button></th>
         </tr>
       </table>
-    </header>
-    <section>
+    </div>
+    <div class="main-section">
       <table>
         <tr>
-          <th style="width: 800px; height: 645px;">login section</th>
+          <th style="width: 800px; height: 645px;">Login Section</th>
         </tr>
       </table>
-    </section>
-    <footer>
+    </div>
+    <div class="footer">
       <table>
         <tr>
           <th style="width: 974px;height: 50px;">Footer</th>
         </tr>
       </table>
-    </footer>
+    </div>
   </body>
   <script src="./renderer.js"></script>
 </html>
