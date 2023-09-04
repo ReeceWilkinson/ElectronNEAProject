@@ -8,10 +8,10 @@ table {
     border-collapse: collapse;
     width: 100%;
   }
-  
-  td, th {
-    text-align: center;
-  }
+
+a { text-decoration:none;color:black }
+
+a:hover { text-decoration: none; color:blue; }
 
 footer {
     position: absolute; 
@@ -38,39 +38,36 @@ footer {
 
 #button {
   background-color: white;
-  border: 3px solid rebeccapurple;
+  border: 3px solid white;
   border-radius: 7px;
-  color: rebeccapurple;
+  color: black;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
   padding: 8px 16px;
+  align-self: center;
+  width: 150px;
 }
+
 #button:hover {
   background-color: lavender;
 }
+
 #button:active {
-  background-color: rebeccapurple;
-  color: white;
+  background-color: white;
+  color: black;
 }
+
 #button:focus-visible {
-  box-shadow: 0 0 0 2px white, 0 0 0 5px rebeccapurple;
+  box-shadow: 0 0 0 2px white, 0 0 0 5px white;
   outline: none;
 }
 
-#login-button{
-  width:100%;
-  height:100%;
-  border:none;
-  font-size:17px;
-  font-weight:600;
-  color:#fff;
-  background-color:#ddd;
-  cursor:pointer;
-}
-
-
-#login-button:hover{
-  background-color:#ccc;
+.posts {
+  background-color: #666666;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 20%;
 }
