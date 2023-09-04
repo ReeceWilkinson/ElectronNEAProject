@@ -20,3 +20,19 @@ footer {
     position: absolute; 
     bottom: 6px;
 }
+
+.topnav input[type=text] {
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
