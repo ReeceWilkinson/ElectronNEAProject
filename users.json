@@ -3,13 +3,15 @@
     "users": [ 
         {
     "id" : 1,
-    "Fullname" : "Reece Wilkinson",
+    "First Name": "Reece",
+    "Last Name": "Wilkinson",
     "Username": "OriginOfBruh",
     "password": "ExamplePassword"
         },
         {
             "id": 2,
-            "Fullname": "Ginny Ridgway",
+            "First Name": "Ginny",
+            "Last Name": "Ridgway",
             "Username": "GinnyMate",
             "password": "ginnysSuperSecretPassword"
         }
