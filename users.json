@@ -6,6 +6,12 @@
     "Fullname" : "Reece Wilkinson",
     "Username": "OriginOfBruh",
     "password": "ExamplePassword"
+        },
+        {
+            "id": 2,
+            "Fullname": "Ginny Ridgway",
+            "Username": "GinnyMate",
+            "password": "ginnysSuperSecretPassword"
         }
     ]
 }
