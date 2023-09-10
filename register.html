@@ -5,6 +5,7 @@
     <title>Electro</title>
     <link rel="stylesheet" href="styles.css">
     <script src="./renderer.js"></script>
+    <script src="./register.js"></script>
   </head>
   <body>
     <script type="module" src="./index.js"></script>
@@ -30,21 +31,21 @@
             <th style="width: 800px; height: 640px;">
               <div class="registerPage">
                 <h1>Register Form</h1>
-                <form>
+                <form id="regForm">
                   <div class="login-container">
                     <label for="uname"><b><h3>Username:</h3></b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <input type="text" placeholder="Enter Username" name="Uname" required id="Uname">
   
                     <label for="psw"><b><h3>Password:</h3></b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" minlength="7" required><br>
+                    <input type="password" placeholder="Enter Password" name="psw" minlength="7" required id="Pword"><br>
 
                     <label for="fname"><b><h3>Firstname:</h3></b></label>
-                    <input type="text" placeholder="Enter FirstName" name="fname" required><br>
+                    <input type="text" placeholder="Enter FirstName" name="fname" required id="Fname"><br>
 
                     <label for="lname"><b><h3>Last Name:</h3></b></label>
-                    <input type="text" placeholder="Enter LastName" name="lname" required><br>
+                    <input type="text" placeholder="Enter LastName" name="lname" required id="Lname"><br>
   
-                    <button type="submit" id="button" style="margin-top: 20px;">Register</button>
+                    <button type="submit" id="button" style="margin-top: 20px;" onclick="submitRegData()">Register</button>
                   </div>
                   <button class="login-button" id="registerButton" style="width:200px" onclick="document.location.href='./loginPage.html'">Already a user? Login Here</button>
                 </form>            

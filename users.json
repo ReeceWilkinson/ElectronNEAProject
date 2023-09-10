@@ -2,16 +2,14 @@
 {
     "users": [ 
         {
-    "id" : 1,
-    "First Name": "Reece",
-    "Last Name": "Wilkinson",
+    "FirstName": "Reece",
+    "LastName": "Wilkinson",
     "Username": "OriginOfBruh",
     "password": "ExamplePassword"
         },
         {
-            "id": 2,
-            "First Name": "Ginny",
-            "Last Name": "Ridgway",
+            "FirstName": "Ginny",
+            "LastName": "Ridgway",
             "Username": "GinnyMate",
             "password": "ginnysSuperSecretPassword"
         }
