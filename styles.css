@@ -88,6 +88,14 @@ footer {
   height: 85%;
 }
 
+.addPage {
+  background-color: #666666;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 80%;
+}
+
 #registerButton {
   background-color: white;
   border: 3px solid white;
@@ -113,6 +121,35 @@ footer {
 }
 
 #reigsterButton:focus-visible {
+  box-shadow: 0 0 0 2px white, 0 0 0 5px white;
+  outline: none;
+}
+
+#createbutton {
+  background-color: #666666;
+  border: 3px solid #666666;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 16px;
+  align-self: center;
+  width: 150px;
+  margin-top: 10px;
+}
+
+#createbutton:hover {
+  background-color: lavender;
+}
+
+#createbutton:active {
+  background-color: white;
+  color: black;
+}
+
+#createbutton:focus-visible {
   box-shadow: 0 0 0 2px white, 0 0 0 5px white;
   outline: none;
 }

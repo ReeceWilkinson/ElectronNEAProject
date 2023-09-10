@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./renderer.js"></script>
+    <script src="./createpost.js"></script>
+    <script src="index.js"></script>
+
+    <style>
+    #title {
+        width: 90%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #mainContent {
+        width: 90%;
+        height: 175px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    </style>
+  </head>
+  <body>
+    <script type="module" src="./index.js"></script>
+    <div class="topnav">
+      <table>
+        <tr>
+          <th style="width: 100px; height: 50px;align-self: center;padding-left: 5px;padding-top: 5px;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
+          <th>
+            <div class="search-container">
+                <form>
+                  <button type="submit" style="float: right;"><img src="assets/searchIcon.png" alt="search icon magnifying glass" width="46px" height="45px"></button>
+                  <input type="text" placeholder="Search.." name="search" style="width: 580px;float: right; height: 50px;margin-top: 1px;">
+                </form>
+            </div>
+          </th>
+          <th style="width: 200px; height: 50px;"><button class="login-button" id="button" onclick="document.location.href='./loginPage.html'">Login Page</button></th>
+        </tr>
+      </table>
+    </div>
+    <div class="main-section">
+      <table>
+        <tr>
+          <th style="width: 800px; height: 640px;">
+            <div class="addPage">
+                <h1>Add new post</h1>
+                <form id="addForm">
+                  <div class="login-container">
+                    <label for="uname"><b><h3>Title:</h3></b></label>
+                    <input type="text" name="title" required id="title">
+  
+                    <label for="psw"><b><h3>Main content:</h3></b></label>
+                    <input type="text" sname="mainContent" required id="mainContent"><br>
+  
+                    <button type="submit" id="button" style="margin-top: 20px;" onclick="addpost()">Add post</button>
+                  </div>
+                </form>            
+              </div>
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div class="footer">
+      <table>
+        <tr>
+          <th style="width: 974px;height: 50px;"><p style="float: left;padding-left: 15px;">Copyright © 2023 Reece Wilkinson Inc. All rights reserved.</p><p style="float: right;padding-right: 15px;">United Kingdom</p></th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
