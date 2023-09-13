@@ -5,6 +5,9 @@ let userAccounts = require('./users.json');
 let userPosts = require('./posts.json')
 
 const createWindow = () => {
+  /* browserwindow obj {width,height,attributes,web preferneces}
+  win.loadfile used to load the correct html page first
+  */
   const win = new BrowserWindow({
     autoHideMenuBar: true,
     width: 1000,
