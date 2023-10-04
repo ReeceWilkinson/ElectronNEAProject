@@ -5,8 +5,11 @@ let userAccounts = require('./users.json');
 let userPosts = require('./posts.json')
 
 const createWindow = () => {
-  /* browserwindow obj {width,height,attributes,web preferneces}
-  win.loadfile used to load the correct html page first
+  /** 
+  * creates the window that the software and html will be displayed on.
+  * creates an object 'BrowserWindow' with attributes to run based on.
+  *
+  * returns a window for the html code to be displayed on.
   */
   const win = new BrowserWindow({
     autoHideMenuBar: true,

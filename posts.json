@@ -8,7 +8,8 @@
             "month": "09",
             "day": "04",
             "time": "22:32",
-            "userPosted": "OriginOfBruh"
+            "userPosted": "OriginOfBruh",
+            "votes": 0
         },
         {
             "id": 2,
@@ -18,7 +19,8 @@
             "month": "09",
             "day": "04",
             "time": "22:38",
-            "userPosted": "OriginOfBruh"
+            "userPosted": "OriginOfBruh",
+            "votes": 0
         }
     ]
 }

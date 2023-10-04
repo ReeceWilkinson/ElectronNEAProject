@@ -1,2 +1,0 @@
-let addPostInputs = require('./createpost')
-

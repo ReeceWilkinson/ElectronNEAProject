@@ -1,5 +1,4 @@
-const fs = require('fs/promises')
-const { writeFile, readFile } = require('fs');
+const fs = require('fs');
 
 function submitRegData() {
   const inputs = document.getElementById("regForm").elements;
@@ -16,22 +15,5 @@ function submitRegData() {
     Password: pword
   };
 
-  let config = JSON.stringify(userObj)
-  const path = './users.json'
-
-  readFile(path, (error, data) => {
-    if (error) {
-      console.log(error);
-      return;
-    }
-    const parsedData = JSON.parse(data);
-    parsedData.createdAt = new Date().toISOString();
-    writeFile(path, JSON.stringify(parsedData, null, 2), (err) => {
-      if (err) {
-        console.log('Failed to write updated data to file');
-        return;
-      }
-      console.log('Updated file successfully');
-    });
-  });
+  console.log(userObj)
 }
