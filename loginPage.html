@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Electro</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="./renderer.js"></script>
-  </head>
-  <body>
-    <script type="module" src="./index.js"></script>
-    <div class="topnav">
-      <table>
-        <tr>
-          <th style="width: 100px; height: 50px;align-self: center;padding-left: 5px;padding-top: 5px;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
-          <th>
-            <div class="search-container">
-                <form>
-                  <button type="submit" style="float: right;"><img src="assets/searchIcon.png" alt="search icon magnifying glass" width="46px" height="45px"></button>
-                  <input type="text" placeholder="Search.." name="search" style="width: 580px;float: right; height: 50px;margin-top: 1px;">
-                </form>
-            </div>
-          </th>
-          <th style="width: 200px; height: 50px;"><button class="login-button" id="button" onclick='document.location.href="index.html"'>Cancel</button></th>
-        </tr>
-      </table>
-    </div>
-    <div class="main-section">
-      <table>
-        <tr>
-          <th style="width: 800px; height: 640px;">
-            <div class="loginPage">
-              <h1>Login Form</h1>
-              <form>
-                <div class="login-container">
-                  <label for="uname"><b><h3>Username:</h3></b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
 
-                  <label for="psw"><b><h3>Password:</h3></b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" minlength="7" required><br>
+<head>
+  <meta charset="UTF-8" />
+  <title>Electro</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./renderer.js"></script>
+  <script src="./login.js"></script>
+</head>
 
-                  <button type="submit" id="button" style="margin-top: 20px;">Login</button>
-                </div>
-                <button class="login-button" id="registerButton" onclick="document.location.href='./register.html'">New User? Register here</button>
-              </form>            
-            </div>
-          </th>
-        </tr>
-      </table>
-    </div>
-    <div class="footer">
-      <table>
-        <tr>
-          <th style="width: 974px;height: 50px;"><p style="float: left;padding-left: 15px;">Copyright © 2023 Reece Wilkinson Inc. All rights reserved.</p><p style="float: right;padding-right: 15px;">United Kingdom</p></th>
-        </tr>
-      </table>
-    </div>
-  </body>
+<body>
+  <script type="module" src="./index.js"></script>
+  <div class="topnav">
+    <table>
+      <tr>
+        <th style="width: 100px; height: 50px;align-self: center;padding-left: 5px;padding-top: 5px;"><img
+            src="assets/Placeholder logo.png" alt="placeholder logo"></th>
+        <th>
+          <div class="search-container">
+            <form>
+              <button type="submit" style="float: right;"><img src="assets/searchIcon.png"
+                  alt="search icon magnifying glass" width="46px" height="45px"></button>
+              <input type="text" placeholder="Search.." name="search"
+                style="width: 580px;float: right; height: 50px;margin-top: 1px;">
+            </form>
+          </div>
+        </th>
+        <th style="width: 200px; height: 50px;"><button class="login-button" id="button"
+            onclick='document.location.href="index.html"'>Cancel</button></th>
+      </tr>
+    </table>
+  </div>
+  <div class="main-section">
+    <table>
+      <tr>
+        <th style="width: 800px; height: 640px;">
+          <div class="loginPage">
+            <h1>Login Form</h1>
+            <form id="logForm">
+              <div class="login-container">
+                <label for="uname"><b>
+                    <h3>Username:</h3>
+                  </b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>
+                    <h3>Password:</h3>
+                  </b></label>
+                <input type="password" placeholder="Enter Password" name="psw" minlength="7" required><br>
+
+                <button type="submit" id="button" style="margin-top: 20px;" onclick="submitLoginData()">Login</button>
+              </div>
+              <button class="login-button" id="registerButton" onclick="document.location.href='./register.html'">New
+                User? Register here</button>
+            </form>
+          </div>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <table>
+      <tr>
+        <th style="width: 974px;height: 50px;">
+          <p style="float: left;padding-left: 15px;">Copyright © 2023 Reece Wilkinson Inc. All rights reserved.</p>
+          <p style="float: right;padding-right: 15px;">United Kingdom</p>
+        </th>
+      </tr>
+    </table>
+  </div>
+</body>
+
 </html>

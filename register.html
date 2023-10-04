@@ -6,7 +6,7 @@
   <title>Electro</title>
   <link rel="stylesheet" href="styles.css">
   <script src="./renderer.js"></script>
-  <script type='module' src="./register.js"></script>
+  <script src="./register.js"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
         <th style="width: 800px; height: 640px;">
           <div class="registerPage">
             <h1>Register Form</h1>
-            <form id="regForm">
+            <form id="regForm" onsubmit="return false">
               <div class="login-container">
                 <label for="uname"><b>
                     <h3>Username:</h3>
@@ -60,6 +60,7 @@
                 <input type="text" placeholder="Enter LastName" name="lname" required id="Lname"><br>
 
                 <button type="submit" id="button" style="margin-top: 20px;" onclick="submitRegData()">Register</button>
+                <p id='textTest'></p>
               </div>
               <button class="login-button" id="registerButton" style="width:200px"
                 onclick="document.location.href='./loginPage.html'">Already a user? Login Here</button>
