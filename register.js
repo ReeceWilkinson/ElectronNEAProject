@@ -16,27 +16,14 @@ function submitRegData() {
   let fname = inputs[2].value;
   let lname = inputs[3].value;
 
-  hashedPword = passwordHasher(pword)
-
   var userObj = {
     FirstName: fname,
     LastName: lname,
     UserName: uname,
-    Password: hashedPword
+    Password: pword
   };
 
-  let userJson = fs.readFileSync("users.json");
+  console.log(userObj)
 
-  let usersList = JSON.parse(userJson);
-
-  usersList.push(userObj);
-
-  userJson = JSON.stringify(usersList);
-
-  fs.writeFileSync("users.json",userJson)
-
-}
-
-function passwordHasher(pword) {
-  
+  fs.writeFile('test.txt', userObj)
 }
