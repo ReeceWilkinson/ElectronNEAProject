@@ -25,5 +25,5 @@ function submitRegData() {
 
   console.log(userObj)
 
-  fs.writeFile('test.txt', userObj)
+  fs.writeFileSync('test.txt', JSON.stringify(userObj))
 }
