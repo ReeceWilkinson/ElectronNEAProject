@@ -1,17 +1,22 @@
-
 {
-    "users": [ 
+    "users": [
         {
-    "FirstName": "Reece",
-    "LastName": "Wilkinson",
-    "Username": "OriginOfBruh",
-    "password": "ExamplePassword"
+            "FirstName": "Reece",
+            "LastName": "Wilkinson",
+            "Username": "OriginOfBruh",
+            "Password": "ExamplePassword"
         },
         {
             "FirstName": "Ginny",
             "LastName": "Ridgway",
             "Username": "GinnyMate",
-            "password": "ginnysSuperSecretPassword"
+            "Password": "ginnysSuperSecretPassword"
+        },
+        {
+            "FirstName": "cdawg",
+            "LastName": "hay",
+            "UserName": "Callhumer",
+            "Password": "password"
         }
     ]
 }

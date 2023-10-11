@@ -25,5 +25,13 @@ function submitRegData() {
 
   console.log(userObj)
 
-  fs.writeFileSync('test.txt', JSON.stringify(userObj))
+  let usersjson = fs.readFileSync("users.json","utf-8");
+
+  let users = JSON.parse(usersjson);
+
+  users["users"].push(userObj)
+
+  usersjson = JSON.stringify(users);
+
+  fs.writeFileSync("users.json",usersjson,"utf-8");
 }

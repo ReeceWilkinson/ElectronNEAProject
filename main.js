@@ -24,9 +24,8 @@ const createWindow = () => {
       contextIsolation:false
     }
   })
-  win.webContents.openDevTools()
 
-  win.loadFile('index.html')
+  win.loadFile('login.html')
 }
 
 app.whenReady().then(() => {
