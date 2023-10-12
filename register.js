@@ -1,7 +1,7 @@
 const fs = require('fs')
 const CryptoJS = require('crypto-js');  
 
-function passwordEncrypter(password,uname) {
+function passwordEncrypter(password) {
   /**
   * takes the password that was inputted into the user form from the submitRegData function and encrypts the password for storage
   * args:
@@ -9,8 +9,32 @@ function passwordEncrypter(password,uname) {
   *
   * returns the encrypted password for storage
   */
- encryptedPassword = CryptoJS.AES.encrypt(password,uname).toString()
+ encryptedPassword = CryptoJS.SHA256(password).toString()
  return encryptedPassword
+}
+
+function charChecker(fname,lname){
+  /**
+   * checks the first and last names that the user inputted for any special characters or numbers
+   * 
+   * args:
+   *  fname - first name user inputted
+   *  lname - last name user inputted
+   * 
+   * returns either true if neither name contains any banned characters or false if the names do contain an characters
+   */
+  const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/
+  const numbersEx = /\d+/
+  fnameTestChars = specialChars.test(fname);
+  fnameTestNums = numbersEx.test(fname);
+  lnameTestNums = numbersEx.test(lname);
+  lnameTestChars = specialChars.test(lname);
+  if (fnameTestChars == false && lnameTestChars == false && fnameTestNums == false && lnameTestNums == false) {
+    return true
+  } else {
+    alert("Cannot contain any special characters or numbers in first or last name.")
+    return false
+  }
 }
 
 function submitRegData() {
@@ -31,6 +55,7 @@ function submitRegData() {
 
   let valid = false
   let encryptedPassword = ''
+  let usernameValidation = false
 
   if (pword.length >= 7 && uname.length >= 2) {
     if (pword.length != 0 && uname.length != 0 && fname.length != 0 && lname.length != 0) {
@@ -42,11 +67,20 @@ function submitRegData() {
   var userObj = {
     FirstName: fname,
     LastName: lname,
-    UserName: uname,
+    Username: uname,
     Password: encryptedPassword,
   };
 
-  if (valid == true) {
+  let charValidation = charChecker(fname,lname)
+  console.log(charValidation)
+
+  if (/\s/g.test(uname) == false) {
+    usernameValidation == true
+  } else {
+    alert('Username cannot have spaces in.')
+  }
+
+  if (valid == true && charValidation == true && usernameValidation == true) {
 
     console.log(userObj)
 
@@ -59,6 +93,5 @@ function submitRegData() {
     usersjson = JSON.stringify(users);
 
     fs.writeFileSync("users.json", usersjson, "utf-8");
-
   }
 }
