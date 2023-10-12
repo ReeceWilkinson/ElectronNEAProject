@@ -1,4 +1,17 @@
 const fs = require('fs')
+const CryptoJS = require('crypto-js');  
+
+function passwordEncrypter(password,uname) {
+  /**
+  * takes the password that was inputted into the user form from the submitRegData function and encrypts the password for storage
+  * args:
+  *   just the password from the submitRegData() function
+  *
+  * returns the encrypted password for storage
+  */
+ encryptedPassword = CryptoJS.AES.encrypt(password,uname).toString()
+ return encryptedPassword
+}
 
 function submitRegData() {
   /**
@@ -16,22 +29,36 @@ function submitRegData() {
   let fname = inputs[2].value;
   let lname = inputs[3].value;
 
+  let valid = false
+  let encryptedPassword = ''
+
+  if (pword.length >= 7 && uname.length >= 2) {
+    if (pword.length != 0 && uname.length != 0 && fname.length != 0 && lname.length != 0) {
+      encryptedPassword = passwordEncrypter(pword,uname)
+      valid = true
+    }
+  }
+
   var userObj = {
     FirstName: fname,
     LastName: lname,
     UserName: uname,
-    Password: pword
+    Password: encryptedPassword,
   };
 
-  console.log(userObj)
+  if (valid == true) {
 
-  let usersjson = fs.readFileSync("users.json","utf-8");
+    console.log(userObj)
 
-  let users = JSON.parse(usersjson);
+    let usersjson = fs.readFileSync("users.json", "utf-8");
 
-  users["users"].push(userObj)
+    let users = JSON.parse(usersjson);
 
-  usersjson = JSON.stringify(users);
+    users["users"].push(userObj)
 
-  fs.writeFileSync("users.json",usersjson,"utf-8");
+    usersjson = JSON.stringify(users);
+
+    fs.writeFileSync("users.json", usersjson, "utf-8");
+
+  }
 }

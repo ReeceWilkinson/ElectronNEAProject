@@ -13,6 +13,7 @@
     "electron": "^25.8.0"
   },
   "dependencies": {
+    "crypto-js": "^4.1.1",
     "fs": "^0.0.1-security"
   }
 }
