@@ -24,7 +24,7 @@
         <th style="width: 800px; height: 640px;">
           <div class="registerPage">
             <h1>Register Form</h1>
-            <form id="regForm">
+            <form id="regForm" onsubmit="return false">
               <div class="login-container">
                 <label for="uname"><b>
                     <h3>Username:</h3>
@@ -48,6 +48,7 @@
 
                 <button type="submit" id="button" style="margin-top: 20px;" onclick="submitRegData()">Register</button>
               </div>
+              <p id="userMsg"></p>
               <button class="login-button" id="registerButton" style="width:200px"
                 onclick="document.location.href='./login.html'">Already a user? Login Here</button>
             </form>

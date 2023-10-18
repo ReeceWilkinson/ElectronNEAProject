@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain,dialog } = require('electron')
 const path = require('path')
 
 let userAccounts = require('./users.json');
@@ -21,7 +21,8 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
-      contextIsolation:false
+      contextIsolation:false,
+      enableRemoteModule: false
     }
   })
 

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const CryptoJS = require('crypto-js');  
+const { dialog } = require('electron')
 
 function passwordEncrypter(password) {
   /**
@@ -34,13 +35,12 @@ function submitLoginData() {
 
     if (users["users"][i].Username == uname) {
       if (passwordEncrypter(pword) == users["users"][i].Password) {
-        alert(`Welcome to Electro, ${users["users"][i].FirstName}.`)
         document.location.href='./index.html'
         break
       }
     }
     if (i == users["users"].length-1) {
-      alert("no user data by that login information")
+      document.getElementById('userMsg').innerHTML = "No user data by that login information. Please try again :)"
     }
   }
 }

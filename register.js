@@ -1,5 +1,6 @@
 const fs = require('fs')
 const CryptoJS = require('crypto-js');  
+const {dialog} = require('electron').remote
 
 function passwordEncrypter(password) {
   /**
@@ -29,7 +30,7 @@ function usernameChecker(username) {
 
   for (i=0;i<users["users"].length;i++){
     if (users["users"][i].Username == username) {
-      alert('Username already exists.')
+      document.getElementById('userMsg').innerHTML = 'Username already exists.'
       checker = false
     }
   }
@@ -60,7 +61,7 @@ function charChecker(fname,lname){
   if (fnameTestChars == false && lnameTestChars == false && fnameTestNums == false && lnameTestNums == false) {
     return true
   } else {
-    alert("Cannot contain any special characters or numbers in first or last name.")
+    document.getElementById('userMsg').innerHTML = "Cannot contain any special characters or numbers in first or last name."
     return false
   }
 }
@@ -104,7 +105,7 @@ function submitRegData() {
   if (/\s/g.test(uname) == false) {
     usernameValidation = true
   } else {
-    alert('Username cannot have spaces in.')
+    document.getElementById('userMsg').innerHTML = 'Username cannot have spaces in.'
   }
 
   usernameCheck = usernameChecker(uname)
@@ -123,7 +124,6 @@ function submitRegData() {
 
     fs.writeFileSync("users.json", usersjson, "utf-8");
 
-    alert('Thank you for registering an account, feel free to login now :)')
     document.location.href='./login.html'
   }
 }
