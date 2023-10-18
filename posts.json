@@ -1,7 +1,6 @@
 {
     "posts":[
         {
-            "id": 1,
             "title": "My friend will",
             "text": "My friend will is a really smelly guy and needs a bath. :)",
             "year": "2023",
@@ -12,7 +11,6 @@
             "votes": 0
         },
         {
-            "id": 2,
             "title": "My friend harry",
             "text": "My friend harry is a really cool guy and needs a girlfriend. :)",
             "year": "2023",

@@ -14,6 +14,13 @@ function passwordEncrypter(password) {
 }
 
 function submitLoginData() {
+  /**
+   * takes 2 user inputs as the username and password from the user and checks the file of user data for the right login information
+   * args:
+   *  password and username from the html form user inputs
+   * 
+   * returns nothing but will either let the user access the program if the data is correct or not.
+   */
   const inputs = document.getElementById("logForm").elements;
 
   let uname = inputs[0].value;
@@ -28,6 +35,7 @@ function submitLoginData() {
     if (users["users"][i].Username == uname) {
       if (passwordEncrypter(pword) == users["users"][i].Password) {
         alert(`Welcome to Electro, ${users["users"][i].FirstName}.`)
+        document.location.href='./index.html'
         break
       }
     }

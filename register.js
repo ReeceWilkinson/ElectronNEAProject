@@ -13,6 +13,34 @@ function passwordEncrypter(password) {
  return encryptedPassword
 }
 
+function usernameChecker(username) {
+  /**
+   * takes a username input from the main function and checks if it is a duplicate username
+   * args:
+   *  username from the main submitRegData function
+   * 
+   * returns true if there is no duplicate username or false if it is a duplicate
+   */
+  let usersjson = fs.readFileSync("users.json","utf-8");
+
+  let users = JSON.parse(usersjson);
+
+  checker = true
+
+  for (i=0;i<users["users"].length;i++){
+    if (users["users"][i].Username == username) {
+      alert('Username already exists.')
+      checker = false
+    }
+  }
+
+  if (checker == false) {
+    return false
+  } else {
+    return true
+  }
+}
+
 function charChecker(fname,lname){
   /**
    * checks the first and last names that the user inputted for any special characters or numbers
@@ -72,15 +100,16 @@ function submitRegData() {
   };
 
   let charValidation = charChecker(fname,lname)
-  console.log(charValidation)
 
   if (/\s/g.test(uname) == false) {
-    usernameValidation == true
+    usernameValidation = true
   } else {
     alert('Username cannot have spaces in.')
   }
 
-  if (valid == true && charValidation == true && usernameValidation == true) {
+  usernameCheck = usernameChecker(uname)
+
+  if (valid == true && charValidation == true && usernameValidation == true && usernameCheck == true) {
 
     console.log(userObj)
 
@@ -93,5 +122,8 @@ function submitRegData() {
     usersjson = JSON.stringify(users);
 
     fs.writeFileSync("users.json", usersjson, "utf-8");
+
+    alert('Thank you for registering an account, feel free to login now :)')
+    document.location.href='./login.html'
   }
 }
