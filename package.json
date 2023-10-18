@@ -1,21 +1,30 @@
 {
   "name": "electronneaproject",
+  "productName": "Electro",
+  "author": "Reece Wilkinson",
   "version": "1.0.0",
-  "description": "",
+  "description": "Reddit 2.0",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron-pack": "electron-builder --win -p always"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^25.8.0"
+    "@electron-forge/plugin-webpack": "^6.4.2",
+    "electron": "^25.8.0",
+    "electron-builder": "^24.6.4",
+    "electron-packager": "^17.1.2"
   },
   "dependencies": {
     "crypto-js": "^4.1.1",
     "dialog": "^0.3.1",
     "fs": "^0.0.1-security",
     "remote": "^0.2.6"
+  },
+  "build": {
+    "appId": "com.ReeceWilko.Electro",
+    "files": "!replit.nix"
   }
 }
