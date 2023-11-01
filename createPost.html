@@ -53,7 +53,7 @@
           <th style="width: 800px; height: 640px;">
             <div class="addPage">
                 <h1>Add new post</h1>
-                <form id="addForm">
+                <form id="addForm" onsubmit="return false">
                   <div class="login-container">
                     <label for="uname"><b><h3>Title:</h3></b></label>
                     <input type="text" name="title" required id="title">
@@ -61,7 +61,7 @@
                     <label for="psw"><b><h3>Main content:</h3></b></label>
                     <input type="text" sname="mainContent" required id="mainContent"><br>
   
-                    <button type="submit" id="button" style="margin-top: 20px;" onclick="addpost()">Add post</button>
+                    <button type="submit" id="button" style="margin-top: 20px;" onclick="addPost()">Add post</button>
                   </div>
                 </form>            
               </div>

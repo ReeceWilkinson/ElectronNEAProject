@@ -108,7 +108,13 @@ footer {
   padding: 8px 16px;
   align-self: center;
   width: 150px;
-  margin-top: 50px;
+  margin-top: 60px;
+}
+
+#userMsg {
+  position: absolute;
+  justify-content: center;
+  width: 95%;
 }
 
 #registerButton:hover {
