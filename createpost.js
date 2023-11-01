@@ -20,23 +20,18 @@ function addPost() {
 
     let userTitle = inputs[0].value;
     let userText = inputs[1].value;  
-
-    let currentUser = null
     
-    fs.readFile('currUser.txt', 'utf8', function(err, data) {
-        if (err) throw err;
-        currentUser = data
-      });
+    var currentUser = fs.readFileSync('currUser.txt','utf8')
 
     var datetime = new Date(); 
 
-    postObj = {
-        title: userTitle,
+    let postObj = {
+        title: userTitle,   
         text: userText,
         year: datetime.getFullYear(),
-        month: datetime.getMonth(),
-        day: datetime.getDay(),
-        time: datetime.getTime(),
+        month: datetime.getMonth() + 1,
+        day: datetime.getDate(),
+        time: datetime.toLocaleTimeString(),
         userPosted: currentUser,
         votes: 0
     }
@@ -46,15 +41,23 @@ function addPost() {
         console.log(postObj)
     
         let postsJson = fs.readFileSync("posts.json", "utf-8");
+
+        console.log(postsJson)
     
-        let posts = JSON.parse(postsjson);
+        let posts = JSON.parse(postsJson);
+
+        console.log(posts)
+
+        posts["posts"].push(postObj)
+
+        console.log(posts)
     
-        posts.push(postObj)
-    
-        postsjson = JSON.stringify(posts);
+        postsJson = JSON.stringify(posts);
+
+        console.log(postsJson)
     
         fs.writeFileSync("posts.json", postsJson, "utf-8");
     
-        //document.location.href='./index.html'
+        document.location.href='./index.html'
       }
 }
