@@ -1,12 +1,32 @@
 {
     "posts": [
         {
-            "title": "First Post ever.",
-            "text": "yipeeeeeee :3",
+            "title": "test title 1",
+            "text": "test text 1",
             "year": 2023,
             "month": 11,
             "day": 1,
-            "time": "15:22:51",
+            "time": "15:54:17",
+            "userPosted": "admin",
+            "votes": 0
+        },
+        {
+            "title": "test title 2",
+            "text": "test title 2",
+            "year": 2023,
+            "month": 11,
+            "day": 1,
+            "time": "15:54:25",
+            "userPosted": "admin",
+            "votes": 0
+        },
+        {
+            "title": "test title 3",
+            "text": "test title 3",
+            "year": 2023,
+            "month": 11,
+            "day": 1,
+            "time": "15:54:25",
             "userPosted": "admin",
             "votes": 0
         }
