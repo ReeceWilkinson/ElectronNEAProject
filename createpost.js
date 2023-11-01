@@ -18,6 +18,19 @@ function addPost() {
     
     fs.readFile('currUser.txt', 'utf8', function(err, data) {
         if (err) throw err;
-        console.log('OK: ' + data);
+        let currentUser = data
       });
+
+    var datetime = new Date(); 
+
+    postObj = {
+        title: userTitle,
+        text: userText,
+        year: datetime.getFullYear(),
+        month: datetime.getMonth(),
+        day: datetime.getDay(),
+        time: datetime.getTime(),
+        userPosted: currentUser,
+        votes: 0
+    }
 }
