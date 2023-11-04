@@ -1,1 +1,4 @@
-{"posts":[{"title":"test title 1","text":"test text 1","year":2023,"month":11,"day":1,"time":"15:54:17","userPosted":"admin","votes":0},{"title":"test title 2","text":"test title 2","year":2023,"month":11,"day":1,"time":"15:54:25","userPosted":"admin","votes":0},{"title":"test title 3","text":"test title 3","year":2023,"month":11,"day":1,"time":"15:54:25","userPosted":"admin","votes":0},{"title":"first ever post ever","text":"this is so fucking cool","year":2023,"month":11,"day":4,"time":"14:03:06","userPosted":"admin","votes":0},{"title":"super cool fucking titke","text":"epic man momnent","year":2023,"month":11,"day":4,"time":"14:03:42","userPosted":"admin","votes":0}]}
+{
+    "posts": [
+    ]
+}

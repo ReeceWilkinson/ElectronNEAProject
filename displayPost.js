@@ -17,12 +17,16 @@ function displayPost() {
 
     let currPostObj = null
 
-    for (i = 0; i < posts["posts"].length; i++) {
-        currPostObj = posts["posts"][i]
-        $( ".main-container" ).append( `<div class="posts">
-                                        <h2>${posts["posts"][i].title}</h2>
-                                        <h5>${posts["posts"][i].year},${posts["posts"][i].time}</h5>
-                                        <p>${posts["posts"][i].text}</p>
-                                        </div>` );
+    if (posts["posts"].length > 1){ 
+        for (i = 0; i < posts["posts"].length; i++) {
+                currPostObj = posts["posts"][i]
+                $( ".main-container" ).append( `<div class="posts">
+                                                <h2>${posts["posts"][i].title}</h2>
+                                                <h5>${posts["posts"][i].year},${posts["posts"][i].time}</h5>
+                                                <p>${posts["posts"][i].text}</p>
+                                                </div>` );
+        } 
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
