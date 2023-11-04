@@ -8,8 +8,9 @@
     <script src="index.js"></script>
     <script src="createpost.js"></script>
     <script src="displayPost.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-  <body>
+  <body onload="displayPost()">
     <script type="module" src="./index.js"></script>
     <div class="topnav">
       <table>
@@ -35,7 +36,7 @@
               <button id="createbutton" onclick="document.location.href='./createPost.html'">Add post</button>
               <div class="posts">
                 <h2>Example Post Title</h2>
-                <h5>Title description, Example Post Date</h5>
+                <h5>Post Date</h5>
                 <p>This is the example of the main content of the post</p>
               </div>
               <div class="posts">

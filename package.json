@@ -21,7 +21,8 @@
     "crypto-js": "^4.1.1",
     "dialog": "^0.3.1",
     "fs": "^0.0.1-security",
-    "remote": "^0.2.6"
+    "jquery": "^3.7.1",
+    "remote": "^0.0.5"
   },
   "build": {
     "appId": "com.ReeceWilko.Electro",
