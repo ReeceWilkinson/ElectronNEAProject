@@ -16,11 +16,11 @@ function displayPost() {
     let posts = JSON.parse(postsjson);
 
     let currPostObj = null
-
-    if (posts["posts"].length > 1){ 
+    
+    if (posts["posts"].length >= 1){ 
         for (i = 0; i < posts["posts"].length; i++) {
                 currPostObj = posts["posts"][i]
-                $( ".main-container" ).append( `<div class="posts">
+                $( ".main-container" ).prepend( `<div class="posts">
                                                 <h2>${posts["posts"][i].title}</h2>
                                                 <h5>${posts["posts"][i].year},${posts["posts"][i].time}</h5>
                                                 <p>${posts["posts"][i].text}</p>
