@@ -207,6 +207,7 @@ footer {
   text-decoration: none;
   display: block;
   border: 2px solid black;
+  cursor: pointer;
 }
 
 /* Change color of dropdown links on hover */
