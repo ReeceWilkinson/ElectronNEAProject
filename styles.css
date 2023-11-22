@@ -24,9 +24,6 @@ footer {
 
 .topnav {
   background-color: #666666;
-  border: 3px solid black;
-  position: sticky;
-  top: 0;
 }
 
 .topnav input[type=text] {
@@ -189,6 +186,8 @@ footer {
   position: absolute;
   float: right;
   margin-right: 5px;
+  top: 69px;
+  left: 828px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -196,7 +195,7 @@ footer {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -207,6 +206,7 @@ footer {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  border: 2px solid black;
 }
 
 /* Change color of dropdown links on hover */

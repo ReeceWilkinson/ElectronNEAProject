@@ -9,8 +9,9 @@
     <script src="createpost.js"></script>
     <script src="displayPost.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="sorting.js"></script>
   </head>
-  <body onload="displayPost()">
+  <body onload="oldestSort()">
     <script type="module" src="./index.js"></script>
     <div class="topnav">
       <table>
@@ -27,20 +28,21 @@
           <th style="width: 200px; height: 50px;"><button class="login-button" id="button" onclick="document.location.href='./login.html'">Logout</button></th>
         </tr>
       </table>
+    </div>  
+    <div class="main-section">
       <table>
         <tr>
           <th style="width: 800px; height: 640px;">
             <button id="createbutton" onclick="document.location.href='./createPost.html'">Add post</button>
               <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
+                <button class="dropbtn">Sort By</button>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a onclick="newestSort()">Newest</a>
+                  <a onclick="oldestSort()">Oldest</a>
+                  <a onclick="alphaTitleSort()">Alphabetical (Title)</a>
+                  <a onclick="alphaUserSort()">Alphabetical (User Posted)</a>
                 </div>
               </div>
-            </div>  
-            <div class="main-section">
             <div class="main-container">
             </div>
           </th>
