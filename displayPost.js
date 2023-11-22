@@ -21,9 +21,10 @@ function displayPost() {
         for (i = 0; i < posts["posts"].length; i++) {
                 currPostObj = posts["posts"][i]
                 $( ".main-container" ).prepend( `<div class="posts">
-                                                <h2>${posts["posts"][i].title}</h2>
-                                                <h5>${posts["posts"][i].year},${posts["posts"][i].time}</h5>
+                                                <h2><b>${posts["posts"][i].title}</b></h2>
+                                                <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>
+                                                <h3>${posts["posts"][i].userPosted}</h3>
                                                 </div>` );
         } 
     } else {

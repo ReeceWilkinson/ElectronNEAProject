@@ -124,6 +124,6 @@ function submitRegData() {
 
     fs.writeFileSync("users.json", usersjson, "utf-8");
 
-    document.location.href='./login.html'
+    document.location.href='./index.html'
   }
 }
