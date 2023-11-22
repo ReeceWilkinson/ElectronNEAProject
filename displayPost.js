@@ -16,7 +16,7 @@ function displayPost() {
     let posts = JSON.parse(postsjson);
 
     let currPostObj = null
-
+    
     if (posts["posts"].length >= 1){ 
         for (i = 0; i < posts["posts"].length; i++) {
                 currPostObj = posts["posts"][i]
