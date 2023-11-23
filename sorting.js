@@ -1,5 +1,4 @@
 window.$ = window.jQuery = require('jquery');
-const globalShortcut = electron.globalShortcut
 
 function sorter(sender) {
     /** 
@@ -12,13 +11,15 @@ function sorter(sender) {
      *  no actual data returns, just adds the html
      */
     if (sender == 'newest') {
-        newestSort()
-    } else if (sender == 'oldest') {
-        oldestSort()
+        document.getElementById("bodyTag").onload = newestSort();
+    } else if (sender == 'oldest' || sender == 'onLoad') {
+        document.getElementById("bodyTag").onload = oldestSort();
     } else if (sender == 'alphaTitle') {
-        alphaTitleSort()
+        document.getElementById("bodyTag").onload = alphaTitleSort();
     } else if (sender == 'alphaName') {
-        alphaUserSort()
+        document.getElementById("bodyTag").onload = alphaUserSort();
+    } else {
+        console.log('not an option')
     }
 }
 
@@ -32,8 +33,8 @@ function newestSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    
-    mainWindow.reload()
+
+    console.log('newest sort')
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -46,6 +47,7 @@ function newestSort() {
     if (posts["posts"].length >= 1){ 
         for (i = 0; i < posts["posts"].length; i++) {
                 currPostObj = posts["posts"][i]
+                console.log(currPostObj)
                 $( ".main-container" ).append( `<div class="posts">
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
                                                 <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
@@ -68,6 +70,7 @@ function oldestSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
+    console.log('oldest sort')
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -78,6 +81,7 @@ function oldestSort() {
     if (posts["posts"].length >= 1){ 
         for (i = 0; i < posts["posts"].length; i++) {
                 currPostObj = posts["posts"][i]
+                console.log(currPostObj)
                 $( ".main-container" ).prepend( `<div class="posts">
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
                                                 <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
