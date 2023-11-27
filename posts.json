@@ -1,1 +1,44 @@
-{"posts":[{"title":"oldest post","text":"","year":2023,"month":11,"day":23,"time":"14:35:16","userPosted":"admin","votes":0},{"title":"middle psot","text":"","year":2023,"month":11,"day":23,"time":"14:35:22","userPosted":"admin","votes":0},{"title":"newest post","text":"","year":2023,"month":11,"day":23,"time":"14:35:27","userPosted":"admin","votes":0},{"title":"test","text":"","year":2023,"month":11,"day":23,"time":"14:51:00","userPosted":"admin","votes":0}]}
+{
+    "posts": [
+        {
+            "title": "oldest post",
+            "text": "",
+            "year": 2023,
+            "month": 11,
+            "day": 23,
+            "time": "14:35:16",
+            "userPosted": "a",
+            "votes": 0
+        },
+        {
+            "title": "middle psot",
+            "text": "",
+            "year": 2023,
+            "month": 11,
+            "day": 23,
+            "time": "14:35:22",
+            "userPosted": "b",
+            "votes": 0
+        },
+        {
+            "title": "newest post",
+            "text": "",
+            "year": 2023,
+            "month": 11,
+            "day": 23,
+            "time": "14:35:27",
+            "userPosted": "c",
+            "votes": 0
+        },
+        {
+            "title": "test",
+            "text": "",
+            "year": 2023,
+            "month": 11,
+            "day": 23,
+            "time": "14:51:00",
+            "userPosted": "d",
+            "votes": 0
+        }
+    ]
+}

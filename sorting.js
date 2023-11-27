@@ -102,9 +102,109 @@ function oldestSort() {
 }
 
 function alphaTitleSort() {
-    console.log('alphatitle test')
+    /**
+     * this function will read the posts.json file and take each object from the file and convert it into html code to be 
+     * added to the main page feed. the posts will be sorted alphabetically by title for this sort.
+     * 
+     * args:
+     *  - there will be no user fed arguments of this function as it will be ran upon loading the main page of posts every time
+     * 
+     * returns nothing as it simply just adds the html code to the page using all of the backend data.
+     */
+    console.log('oldest sort')
+
+    let postsjson = fs.readFileSync("posts.json", "utf-8");
+
+    let posts = JSON.parse(postsjson);
+
+    let currPostObj = null
+
+    let pointerValue = 0
+    let sortedTitles = []
+
+    if (posts["posts"].length >= 1){ 
+        $('.main-container').empty();
+        addidNum = 0
+        addidName = 'post'
+        for (i = 0; i < posts["posts"].length; i++) {
+            sortedTitles.push(`${posts["posts"][i].title}`)
+        } 
+        sortedTitles.sort()
+        console.log(sortedTitles)
+        for (j = 0; j < sortedTitles.length; j++) {
+            // outer loop will get each of the sorted titles
+            currentSortedTitle = sortedTitles[j]
+            for (let k = 0; k < posts["posts"].length; k++) {
+                currPostObj = posts["posts"][k]
+                if (posts["posts"][k].title == currentSortedTitle) {
+                    addfullId = addidName + String(addidNum)
+                    $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
+                    <h2><b>${posts["posts"][k].title}</b></h2>
+                    <h3>${posts["posts"][k].year},${posts["posts"][k].time}</h3>
+                    <p>${posts["posts"][k].text}</p>
+                    <h3>${posts["posts"][k].userPosted}</h3>
+                    </div>`);
+                    addidNum = addidNum + 1
+                } else {
+                    console.log('nothing')
+                }
+            }
+        }
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
+    }
 }
 
 function alphaUserSort() {
-    console.log('alphaname test')
+    /**
+     * this function will read the posts.json file and take each object from the file and convert it into html code to be 
+     * added to the main page feed. the posts will be sorted alphabetically by title for this sort.
+     * 
+     * args:
+     *  - there will be no user fed arguments of this function as it will be ran upon loading the main page of posts every time
+     * 
+     * returns nothing as it simply just adds the html code to the page using all of the backend data.
+     */
+    console.log('oldest sort')
+
+    let postsjson = fs.readFileSync("posts.json", "utf-8");
+
+    let posts = JSON.parse(postsjson);
+
+    let currPostObj = null
+
+    let pointerValue = 0
+    let sortedNames = []
+
+    if (posts["posts"].length >= 1){ 
+        $('.main-container').empty();
+        addidNum = 0
+        addidName = 'post'
+        for (i = 0; i < posts["posts"].length; i++) {
+            sortedNames.push(`${posts["posts"][i].userPosted}`)
+        } 
+        sortedNames.sort()
+        console.log(sortedNames)
+        for (j = 0; j < sortedNames.length; j++) {
+            // outer loop will get each of the sorted titles
+            currentSortedTitle = sortedNames[j]
+            for (let k = 0; k < posts["posts"].length; k++) {
+                currPostObj = posts["posts"][k]
+                if (posts["posts"][k].userPosted == currentSortedTitle) {
+                    addfullId = addidName + String(addidNum)
+                    $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
+                    <h2><b>${posts["posts"][k].title}</b></h2>
+                    <h3>${posts["posts"][k].year},${posts["posts"][k].time}</h3>
+                    <p>${posts["posts"][k].text}</p>
+                    <h3>${posts["posts"][k].userPosted}</h3>
+                    </div>`);
+                    addidNum = addidNum + 1
+                } else {
+                    console.log('nothing')
+                }
+            }
+        }
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
+    }
 }
