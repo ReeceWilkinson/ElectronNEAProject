@@ -111,7 +111,6 @@ function alphaTitleSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    console.log('oldest sort')
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -145,8 +144,7 @@ function alphaTitleSort() {
                     <h3>${posts["posts"][k].userPosted}</h3>
                     </div>`);
                     addidNum = addidNum + 1
-                } else {
-                    console.log('nothing')
+                    posts["posts"].splice(k,1)
                 }
             }
         }
@@ -184,7 +182,6 @@ function alphaUserSort() {
             sortedNames.push(`${posts["posts"][i].userPosted}`)
         } 
         sortedNames.sort()
-        console.log(sortedNames)
         for (j = 0; j < sortedNames.length; j++) {
             // outer loop will get each of the sorted titles
             currentSortedTitle = sortedNames[j]
@@ -199,9 +196,8 @@ function alphaUserSort() {
                     <h3>${posts["posts"][k].userPosted}</h3>
                     </div>`);
                     addidNum = addidNum + 1
-                } else {
-                    console.log('nothing')
-                }
+                    posts["posts"].splice(k,1)
+                } 
             }
         }
     } else {
