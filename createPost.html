@@ -25,7 +25,8 @@
         margin: 8px 0;
         display: inline-block;
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 4px; 
+        word-wrap: break-word;
     }
     </style>
   </head>
@@ -56,11 +57,12 @@
                 <form id="addForm" onsubmit="return false">
                   <div class="login-container">
                     <label for="uname"><b><h3>Title:</h3></b></label>
-                    <input type="text" name="title" required id="title">
+                    <input type="text" name="title" required id="title" minlength="2" maxlength="128" required>
   
                     <label for="psw"><b><h3>Main content:</h3></b></label>
-                    <input type="text" sname="mainContent" required id="mainContent"><br>
+                    <input type="text" sname="mainContent" required id="mainContent" minlength="2" maxlength="512" required><br>
   
+                    <p id="userMsg" style="margin-top: 30px;position: fixed; left: -270px"></p>
                     <button type="submit" id="button" style="margin-top: 20px;position: fixed;left: 420px;" onclick="addPost()">Add post</button>
                     <button type="submit" id="button" style="margin-top: 20px; float: right;position: fixed;left: 790px;" onclick="document.location.href='./index.html'">Cancel</button>
                   </div>

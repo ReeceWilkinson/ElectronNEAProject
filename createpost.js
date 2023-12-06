@@ -1,5 +1,32 @@
 const fs = require('fs')
 
+function lengthChecker(title,text) {
+    /**
+     * this function simply finds the length of the title and the text of the post and checks if the lengths are under
+     * the required limits of 512 for the text and 128 characters for the title respectively.
+     * 
+     * args:
+     *  -   the title to be checked
+     *  -   the text of the post to be cheecked
+     * 
+     * returns true if the lengths are under the limits or false if over
+     */
+    if (text.length > 512 || title.length > 128 || text.length < 1 || title.length < 1) {
+        if (text.length > 512) {
+            document.getElementById('userMsg').innerHTML = "Main content cannot be more then 512 characters."
+        } else if (text.length < 1) {
+            document.getElementById('userMsg').innerHTML = "Main content cannot be less then 1 character."
+        } else if (title.length > 128) {
+            document.getElementById('userMsg').innerHTML = "Title cannot be more then 128 characters."
+        } else if (title.length < 1) {
+            document.getElementById('userMsg').innerHTML = "Title cannot be less then 1 character."
+        }
+    } else {
+        return true
+    }
+}
+
+
 function addPost() {
     /**
      * this function will take two user inputs of the title of the post and the main text content of the post and 
@@ -36,7 +63,7 @@ function addPost() {
         votes: 0
     }
 
-    if (true == true) {
+    if (lengthChecker(userTitle,userText) == true) {
 
         console.log(postObj)
     

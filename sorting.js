@@ -10,9 +10,9 @@ function sorter(sender) {
      * returns:
      *  no actual data returns, just adds the html
      */
-    if (sender == 'newest') {
+    if (sender == 'newest' || sender == 'onLoad') {
         document.getElementById("bodyTag").onload = newestSort();
-    } else if (sender == 'oldest' || sender == 'onLoad') {
+    } else if (sender == 'oldest') {
         document.getElementById("bodyTag").onload = oldestSort();
     } else if (sender == 'alphaTitle') {
         document.getElementById("bodyTag").onload = alphaTitleSort();
@@ -116,9 +116,6 @@ function alphaTitleSort() {
 
     let posts = JSON.parse(postsjson);
 
-    let currPostObj = null
-
-    let pointerValue = 0
     let sortedTitles = []
 
     if (posts["posts"].length >= 1){ 
@@ -126,7 +123,7 @@ function alphaTitleSort() {
         addidNum = 0
         addidName = 'post'
         for (i = 0; i < posts["posts"].length; i++) {
-            sortedTitles.push(`${posts["posts"][i].title}`)
+            sortedTitles.push(`${posts["posts"][i].title}`.toLowerCase())
         } 
         sortedTitles.sort()
         console.log(sortedTitles)
@@ -135,7 +132,7 @@ function alphaTitleSort() {
             currentSortedTitle = sortedTitles[j]
             for (let k = 0; k < posts["posts"].length; k++) {
                 currPostObj = posts["posts"][k]
-                if (posts["posts"][k].title == currentSortedTitle) {
+                if (posts["posts"][k].title.toLowerCase() == currentSortedTitle) {
                     addfullId = addidName + String(addidNum)
                     $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
                     <h2><b>${posts["posts"][k].title}</b></h2>
@@ -179,7 +176,7 @@ function alphaUserSort() {
         addidNum = 0
         addidName = 'post'
         for (i = 0; i < posts["posts"].length; i++) {
-            sortedNames.push(`${posts["posts"][i].userPosted}`)
+            sortedNames.push(`${posts["posts"][i].userPosted}`.toLowerCase())
         } 
         sortedNames.sort()
         for (j = 0; j < sortedNames.length; j++) {
@@ -187,7 +184,7 @@ function alphaUserSort() {
             currentSortedTitle = sortedNames[j]
             for (let k = 0; k < posts["posts"].length; k++) {
                 currPostObj = posts["posts"][k]
-                if (posts["posts"][k].userPosted == currentSortedTitle) {
+                if (posts["posts"][k].userPosted.toLowerCase() == currentSortedTitle) {
                     addfullId = addidName + String(addidNum)
                     $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
                     <h2><b>${posts["posts"][k].title}</b></h2>

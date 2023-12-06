@@ -2,6 +2,21 @@ const fs = require('fs')
 const CryptoJS = require('crypto-js');  
 const {dialog} = require('electron').remote
 
+function currentUsernameWriter(uname) {
+  /**
+   * this function will simply take the username that was used to login and write it to a text file for later use
+   * 
+   * args:
+   *  just the current username used to login
+   * 
+   * returns nothing but will write the username to a text file
+   */
+
+  fs.writeFile('currUser.txt', uname, (err) => {
+    if (err) throw err;
+  })
+}
+
 function passwordEncrypter(password) {
   /**
   * takes the password that was inputted into the user form from the submitRegData function and encrypts the password for storage
@@ -108,6 +123,10 @@ function submitRegData() {
     document.getElementById('userMsg').innerHTML = 'Username cannot have spaces in.'
   }
 
+  if (pword.length < 7){
+    document.getElementById('userMsg').innerHTML = 'Password must be atleast 7 characters.'
+  }
+
   usernameCheck = usernameChecker(uname)
 
   if (valid == true && charValidation == true && usernameValidation == true && usernameCheck == true) {
@@ -124,6 +143,7 @@ function submitRegData() {
 
     fs.writeFileSync("users.json", usersjson, "utf-8");
 
+    currentUsernameWriter(uname)
     document.location.href='./index.html'
   }
 }
