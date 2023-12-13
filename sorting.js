@@ -35,7 +35,9 @@ function newestSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    console.log('oldest sort')
+    document.getElementById("sortbuttonID").innerHTML = "Sort: Newest";
+    document.getElementById("sortbuttonID").style.width = "150px";
+    document.getElementById("sortContainer").style.left = "823px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -59,6 +61,7 @@ function newestSort() {
                 addidNum = addidNum + 1
         } 
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
@@ -73,7 +76,9 @@ function oldestSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    console.log('oldest sort')
+    document.getElementById("sortbuttonID").innerHTML = "Sort: Oldest";
+    document.getElementById("sortbuttonID").style.width = "150px";
+    document.getElementById("sortContainer").style.left = "823px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -111,6 +116,10 @@ function alphaTitleSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
+
+    document.getElementById("sortbuttonID").innerHTML = "Sort: Alpha (Title)";
+    document.getElementById("sortbuttonID").style.width = "200px";
+    document.getElementById("sortContainer").style.left = "773px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -160,7 +169,9 @@ function alphaUserSort() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    console.log('oldest sort')
+    document.getElementById("sortbuttonID").innerHTML = "Sort: Alpha (User)";
+    document.getElementById("sortbuttonID").style.width = "200px";
+    document.getElementById("sortContainer").style.left = "773px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 

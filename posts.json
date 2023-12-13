@@ -1,1 +1,94 @@
-{"posts":[{"title":"test post","text":"content for example post","year":2023,"month":12,"day":6,"time":"14:23:55","userPosted":"admin","votes":0},{"title":"filter test","text":"fuck","year":2023,"month":12,"day":6,"time":"14:24:43","userPosted":"admin","votes":0},{"title":"WHere is Calums' grafical user interface??","text":"ITS NOWHERE HAHAHAHAHAHAHAHHHA","year":2023,"month":12,"day":6,"time":"14:27:24","userPosted":"admin","votes":0},{"title":"asd","text":"asdsa","year":2023,"month":12,"day":6,"time":"14:29:46","userPosted":"testiasd","votes":0},{"title":"calum still has no gui","text":"where user interface XD?","year":2023,"month":12,"day":11,"time":"14:40:47","userPosted":"William","votes":0},{"title":"I hit emerald 2 on r6","text":"1.2 k/d","year":2023,"month":12,"day":11,"time":"14:44:49","userPosted":"ihatereecetylerwilkinson","votes":0},{"title":"jonald duck is a comminist","text":"jonald i know where you are, turn yourswlf in","year":2023,"month":12,"day":11,"time":"14:47:19","userPosted":"John","votes":0},{"title":"Some generic post","text":"some generic content","year":2023,"month":12,"day":11,"time":"14:51:53","userPosted":"mark_ibbertson","votes":0}]}
+{
+    "posts": [
+        {
+            "title": "test post",
+            "text": "content for example post",
+            "year": 2023,
+            "month": 12,
+            "day": 6,
+            "time": "14:23:55",
+            "userPosted": "admin",
+            "votes": 0
+        },
+        {
+            "title": "filter test",
+            "text": "fuck",
+            "year": 2023,
+            "month": 12,
+            "day": 6,
+            "time": "14:24:43",
+            "userPosted": "admin",
+            "votes": 0
+        },
+        {
+            "title": "WHere is Calums' grafical user interface??",
+            "text": "ITS NOWHERE HAHAHAHAHAHAHAHHHA",
+            "year": 2023,
+            "month": 12,
+            "day": 6,
+            "time": "14:27:24",
+            "userPosted": "admin",
+            "votes": 0
+        },
+        {
+            "title": "asd",
+            "text": "asdsa",
+            "year": 2023,
+            "month": 12,
+            "day": 6,
+            "time": "14:29:46",
+            "userPosted": "testiasd",
+            "votes": 0
+        },
+        {
+            "title": "calum still has no gui",
+            "text": "where user interface XD?",
+            "year": 2023,
+            "month": 12,
+            "day": 11,
+            "time": "14:40:47",
+            "userPosted": "William",
+            "votes": 0
+        },
+        {
+            "title": "I hit emerald 2 on r6",
+            "text": "1.2 k/d",
+            "year": 2023,
+            "month": 12,
+            "day": 11,
+            "time": "14:44:49",
+            "userPosted": "ihatereecetylerwilkinson",
+            "votes": 0
+        },
+        {
+            "title": "jonald duck is a comminist",
+            "text": "jonald i know where you are, turn yourswlf in",
+            "year": 2023,
+            "month": 12,
+            "day": 11,
+            "time": "14:47:19",
+            "userPosted": "John",
+            "votes": 0
+        },
+        {
+            "title": "Some generic post",
+            "text": "some generic content",
+            "year": 2023,
+            "month": 12,
+            "day": 11,
+            "time": "14:51:53",
+            "userPosted": "mark_ibbertson",
+            "votes": 0
+        },
+        {
+            "title": "testing",
+            "text": "asodmas",
+            "year": 2023,
+            "month": 12,
+            "day": 13,
+            "time": "12:52:48",
+            "userPosted": "admin",
+            "votes": 0
+        }
+    ]
+}

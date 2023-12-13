@@ -10,6 +10,7 @@
     <script src="displayPost.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="sorting.js"></script>
+    <script src="searching.js"></script>
   </head>
   <body id="bodyTag" onload="sorter('onLoad')">
     <script type="module" src="./index.js"></script>
@@ -19,9 +20,9 @@
           <th style="width: 100px; height: 50px;align-self: center;padding-left: 5px;padding-top: 5px;"><img src="assets/Placeholder logo.png" alt="placeholder logo"></th>
           <th>
             <div class="search-container">
-                <form>
-                  <button type="submit" style="float: right;"><img src="assets/searchIcon.png" alt="search icon magnifying glass" width="46px" height="45px"></button>
-                  <input type="text" placeholder="THIS DOES NOTHING RN :3 THANK YOU FOR YOUR PATIENCE" name="search" style="width: 580px;float: right; height: 50px;margin-top: 1px;">
+                <form onsubmit="return false">
+                  <button type="submit" style="float: right;"  onclick='searching()'><img src="assets/searchIcon.png" alt="search icon magnifying glass" width="46px" height="45px"></button>
+                  <input type="text" id='givenTitle' placeholder="Enter post title or username here:" name="search" style="width: 580px;float: right; height: 50px;margin-top: 1px;">
                 </form>
             </div>
           </th>
@@ -33,16 +34,20 @@
       <table>
         <tr>
           <th style="width: 800px; height: 640px;">
+            <div class="buttons">
+            <button id="refreshButton" onclick="document.location.href='./index.html'">Refresh</button>
             <button id="createbutton" onclick="document.location.href='./createPost.html'">Add post</button>
-              <div class="dropdown">
-                <button class="dropbtn">Sort By</button>
-                <div class="dropdown-content">
-                  <a onclick="sorter('newest')">Newest</a>
-                  <a onclick="sorter('oldest')">Oldest</a>
-                  <a onclick="sorter('alphaTitle')">Alphabetical (Title)</a>
-                  <a onclick="sorter('alphaName')">Alphabetical (User Posted)</a>
-                </div>
+            <div class="dropdown" id="sortContainer">
+              <button class="dropbtn" id="sortbuttonID">Sort By</button>
+              <div class="dropdown-content">
+                <a onclick="sorter('newest')">Newest</a>
+                <a onclick="sorter('oldest')">Oldest</a>
+                <a onclick="sorter('alphaTitle')">Alphabetical (Title)</a>
+                <a onclick="sorter('alphaName')">Alphabetical (User Posted)</a>
               </div>
+            </div>
+          </div>
+            
             <div class="main-container" id="main-container">
             </div>
           </th>
