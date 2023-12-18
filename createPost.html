@@ -51,10 +51,12 @@
                 <form id="addForm" onsubmit="return false">
                   <div class="login-container">
                     <label for="uname"><b><h3>Title:</h3></b></label>
-                    <input type="text" name="title" required id="title" minlength="2" maxlength="128" required>
+                    <input type="text" name="title" id="title" maxlength="128">
   
                     <label for="psw"><b><h3>Main content:</h3></b></label>
-                    <input type="text" sname="mainContent" required id="mainContent" minlength="2" maxlength="512" required><br>
+                    <input type="text" sname="mainContent" id="mainContent" maxlength="512"><br>
+
+                    <input type="file" id="imageInput" name="filename">
   
                     <p id="userMsg" style="margin-top: 30px;position: fixed; left: -270px"></p>
                     <button type="submit" id="button" style="margin-top: 20px;position: fixed;left: 420px;" onclick="addPost()">Add post</button>

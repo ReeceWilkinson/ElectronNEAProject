@@ -18,6 +18,7 @@ const createWindow = () => {
     resizable: false,
     center: true,
     icon: 'assets/icons8-electric-67.png',
+    roundedCorners: false,
 
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

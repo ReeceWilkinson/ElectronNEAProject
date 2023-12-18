@@ -38,6 +38,7 @@ function newestSort() {
     document.getElementById("sortbuttonID").innerHTML = "Sort: Newest";
     document.getElementById("sortbuttonID").style.width = "150px";
     document.getElementById("sortContainer").style.left = "823px";
+    document.getElementById("dropdown-content").style.width = "150px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -56,6 +57,7 @@ function newestSort() {
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
                                                 <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>
+                                                <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
                                                 <h3>${posts["posts"][i].userPosted}</h3>
                                                 </div>` );
                 addidNum = addidNum + 1
@@ -79,6 +81,7 @@ function oldestSort() {
     document.getElementById("sortbuttonID").innerHTML = "Sort: Oldest";
     document.getElementById("sortbuttonID").style.width = "150px";
     document.getElementById("sortContainer").style.left = "823px";
+    document.getElementById("dropdown-content").style.width = "150px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -97,6 +100,7 @@ function oldestSort() {
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
                                                 <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>
+                                                <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
                                                 <h3>${posts["posts"][i].userPosted}</h3>
                                                 </div>` );
                 addidNum = addidNum + 1
@@ -120,6 +124,7 @@ function alphaTitleSort() {
     document.getElementById("sortbuttonID").innerHTML = "Sort: Alpha (Title)";
     document.getElementById("sortbuttonID").style.width = "200px";
     document.getElementById("sortContainer").style.left = "773px";
+    document.getElementById("dropdown-content").style.width = "200px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -147,6 +152,7 @@ function alphaTitleSort() {
                     <h2><b>${posts["posts"][k].title}</b></h2>
                     <h3>${posts["posts"][k].year},${posts["posts"][k].time}</h3>
                     <p>${posts["posts"][k].text}</p>
+                    <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
                     <h3>${posts["posts"][k].userPosted}</h3>
                     </div>`);
                     addidNum = addidNum + 1
@@ -172,6 +178,7 @@ function alphaUserSort() {
     document.getElementById("sortbuttonID").innerHTML = "Sort: Alpha (User)";
     document.getElementById("sortbuttonID").style.width = "200px";
     document.getElementById("sortContainer").style.left = "773px";
+    document.getElementById("dropdown-content").style.width = "200px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -201,6 +208,7 @@ function alphaUserSort() {
                     <h2><b>${posts["posts"][k].title}</b></h2>
                     <h3>${posts["posts"][k].year},${posts["posts"][k].time}</h3>
                     <p>${posts["posts"][k].text}</p>
+                    <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
                     <h3>${posts["posts"][k].userPosted}</h3>
                     </div>`);
                     addidNum = addidNum + 1

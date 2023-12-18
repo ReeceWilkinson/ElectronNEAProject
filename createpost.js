@@ -1,5 +1,12 @@
 const fs = require('fs')
 
+function imageToBase64(file) {
+    // read binary data
+    var bitmap = fs.readFileSync(file);
+    // convert binary data to base64 encoded string
+    return new bitmap.toString('base64');
+}
+
 function lengthChecker(title,text) {
     /**
      * this function simply finds the length of the title and the text of the post and checks if the lengths are under
@@ -47,8 +54,25 @@ function addPost() {
 
     let userTitle = inputs[0].value;
     let userText = inputs[1].value;  
+
+    var input = document.getElementById('imageInput');
+
+    var file = input.files[0];
     
     var currentUser = fs.readFileSync('currUser.txt','utf8')
+
+    var reader = new FileReader();
+
+    var base64String = ''
+
+    reader.onload = function (e) {
+        base64String = e.target.result;
+
+        // You can use the base64String as needed.
+        return base64String
+    }
+
+    reader.readAsDataURL(file);
 
     var datetime = new Date(); 
 
@@ -60,7 +84,8 @@ function addPost() {
         day: datetime.getDate(),
         time: datetime.toLocaleTimeString(),
         userPosted: currentUser,
-        votes: 0
+        votes: 0,
+        pathToImage: base64String
     }
 
     if (lengthChecker(userTitle,userText) == true) {
