@@ -10,6 +10,7 @@ function sorter(sender) {
      * returns:
      *  no actual data returns, just adds the html
      */
+
     if (sender == 'newest' || sender == 'onLoad') {
         document.getElementById("bodyTag").onload = newestSort();
     } else if (sender == 'oldest') {
@@ -55,9 +56,9 @@ function newestSort() {
                 addfullId = addidName + String(addidNum)
                 $( ".main-container" ).prepend( `<div class="posts" id=${addfullId}>
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
-                                                <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
+                                                <h3>${posts["posts"][i].day}/${posts["posts"][i].month}/${posts["posts"][i].year} ${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>
-                                                <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
+                                                <img src="${posts["posts"][i].pathToImage}" width="300px" height="300px">
                                                 <h3>${posts["posts"][i].userPosted}</h3>
                                                 </div>` );
                 addidNum = addidNum + 1

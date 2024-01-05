@@ -43,6 +43,24 @@ footer {
   background-color: #666666;
 }
 
+input[type='file'] {
+  color: rgba(0, 0, 0, 0)
+}
+
+#imageInput {
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 16px;
+  align-self: center;
+  width: 150px;
+}
+
 #button {
   background-color: white;
   border: 3px solid white;

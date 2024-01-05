@@ -27,7 +27,6 @@ function lengthChecker(title,text) {
     }
 }
 
-
 function addPost() {
     /**
      * this function will take two user inputs of the title of the post and the main text content of the post and 
@@ -57,10 +56,6 @@ function addPost() {
 
     let outputString = ''
 
-    
-
-    console.log(imageToBase64(file))
-
     var datetime = new Date(); 
 
     let postObj = {
@@ -72,7 +67,7 @@ function addPost() {
         time: datetime.toLocaleTimeString(),
         userPosted: currentUser,
         votes: 0,
-        pathToImage: file
+        pathToImage: file.path
     }
 
     if (lengthChecker(userTitle,userText) == true) {
