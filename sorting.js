@@ -55,6 +55,7 @@ function newestSort() {
                 currPostObj = posts["posts"][i]
                 addfullId = addidName + String(addidNum)
                 $( ".main-container" ).prepend( `<div class="posts" id=${addfullId}>
+                                                <button type="submit" id="votingButton" style="margin-top: 20px;position: relative;" onclick="upVote('${posts["posts"][i].time}')">+</button><h1 style="position: relative;">${posts["posts"][i].votes}</h1><button type="submit" id="votingButton" style="margin-top: 20px;position: relative;" onclick="downVote('${posts["posts"][i].time}')">-</button>
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
                                                 <h3>${posts["posts"][i].day}/${posts["posts"][i].month}/${posts["posts"][i].year} ${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>

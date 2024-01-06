@@ -58,7 +58,12 @@ function addPost() {
 
     var datetime = new Date(); 
 
+    let postsjson = fs.readFileSync("posts.json", "utf-8");
+
+    let posts = JSON.parse(postsjson);
+
     let postObj = {
+        id: posts["posts"].length,
         title: userTitle,   
         text: userText,
         year: datetime.getFullYear(),
@@ -71,24 +76,14 @@ function addPost() {
     }
 
     if (lengthChecker(userTitle,userText) == true) {
-
-        console.log(postObj)
     
-        let postsJson = fs.readFileSync("posts.json", "utf-8");
+        let postsJson = fs.readFileSync("posts.json", "utf-8")
 
-        console.log(postsJson)
-    
         let posts = JSON.parse(postsJson);
-
-        console.log(posts)
 
         posts["posts"].push(postObj)
 
-        console.log(posts)
-    
         postsJson = JSON.stringify(posts);
-
-        console.log(postsJson)
     
         fs.writeFileSync("posts.json", postsJson, "utf-8");
     

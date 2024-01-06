@@ -1,1 +1,52 @@
-{"posts":[{"title":"cool game screenshot","text":"it is very cool","year":2024,"month":1,"day":4,"time":"23:28:49","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\ElectronNEAProject\\userImages\\photomode_02082023_002122.png"},{"title":"creg","text":"creg","year":2024,"month":1,"day":4,"time":"23:48:11","userPosted":"creg","votes":0,"pathToImage":"C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\ElectronNEAProject\\userImages\\kid with an iron deffieciency.JPG"},{"title":"hehe","text":"haha","year":2024,"month":1,"day":5,"time":"00:15:30","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\Downloads\\Hehe_Haha%21.webp"},{"title":"rapist","text":"RAPIST ON THE LOOSE WATCH YOUR KIDS","year":2024,"month":1,"day":5,"time":"00:16:40","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\Downloads\\IMG_3040.jpg"}]}
+{
+    "posts": [
+        {
+            "id": 0,
+            "title": "cool game screenshot",
+            "text": "it is very cool",
+            "year": 2024,
+            "month": 1,
+            "day": 4,
+            "time": "23:28:49",
+            "userPosted": "admin",
+            "votes": 0,
+            "pathToImage": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\ElectronNEAProject\\userImages\\photomode_02082023_002122.png"
+        },
+        {
+            "id": 1,
+            "title": "creg",
+            "text": "creg",
+            "year": 2024,
+            "month": 1,
+            "day": 4,
+            "time": "23:48:11",
+            "userPosted": "creg",
+            "votes": 0,
+            "pathToImage": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\ElectronNEAProject\\userImages\\kid with an iron deffieciency.JPG"
+        },
+        {
+            "id": 2,
+            "title": "rapist",
+            "text": "RAPIST ON THE LOOSE WATCH YOUR KIDS",
+            "year": 2024,
+            "month": 1,
+            "day": 5,
+            "time": "00:16:40",
+            "userPosted": "admin",
+            "votes": 0,
+            "pathToImage": "C:\\Users\\reece\\Downloads\\IMG_3040.jpg"
+        },
+        {
+            "id": 3,
+            "title": "testing",
+            "text": "testing the ids",
+            "year": 2024,
+            "month": 1,
+            "day": 6,
+            "time": "12:48:48",
+            "userPosted": "admin",
+            "votes": 0,
+            "pathToImage": "C:\\Users\\reece\\Downloads\\blue phase.png"
+        }
+    ]
+}
