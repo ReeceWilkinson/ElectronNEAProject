@@ -33,13 +33,17 @@ function searching() {
         for (i = 0; i < foundPosts.length; i++) {
             addfullId = addidName + String(addidNum)
             $( ".main-container" ).prepend( `<div class="posts" id=${addfullId}>
-                                            <h2><b>${foundPosts[i].title}</b></h2>
-                                            <h3>${foundPosts[i].year},${foundPosts[i].time}</h3>
-                                            <p>${foundPosts[i].text}</p>
-                                            <h3>${foundPosts[i].userPosted}</h3>
-                                            </div>` );
+                                                <div  style="display: flex; width: 100%;justify-content: center;gap: 5px;">
+                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${foundPosts[i].time}')">+</button><h1 style="position: relative;">${foundPosts[i].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${foundPosts[i].time}')">-</button>
+                                                </div>
+                                                <h2><b>${foundPosts[i].title}</b></h2>
+                                                <h3>${foundPosts[i].day}/${foundPosts[i].month}/${foundPosts[i].year} ${foundPosts[i].time}</h3>
+                                                <p>${foundPosts[i].text}</p>
+                                                <img src="${foundPosts[i].pathToImage}" width="300px" height="300px">
+                                                <h3>${foundPosts[i].userPosted}</h3>
+                                                </div>` );
             addidNum = addidNum + 1
-    } 
+    } s
     } else {
         $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts with that username or title.</h1></div>')

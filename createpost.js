@@ -1,5 +1,4 @@
 const fs = require('fs')
-const imageToBase64 = require('image-to-base64');
 
 function lengthChecker(title,text) {
     /**

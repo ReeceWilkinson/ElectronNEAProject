@@ -55,7 +55,9 @@ function newestSort() {
                 currPostObj = posts["posts"][i]
                 addfullId = addidName + String(addidNum)
                 $( ".main-container" ).prepend( `<div class="posts" id=${addfullId}>
-                                                <button type="submit" id="votingButton" style="margin-top: 20px;position: relative;" onclick="upVote('${posts["posts"][i].time}')">+</button><h1 style="position: relative;">${posts["posts"][i].votes}</h1><button type="submit" id="votingButton" style="margin-top: 20px;position: relative;" onclick="downVote('${posts["posts"][i].time}')">-</button>
+                                                <div  style="display: flex; width: 100%;justify-content: center;gap: 5px;">
+                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${posts["posts"][i].time}')">+</button><h1 style="position: relative;">${posts["posts"][i].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${posts["posts"][i].time}')">-</button>
+                                                </div>
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
                                                 <h3>${posts["posts"][i].day}/${posts["posts"][i].month}/${posts["posts"][i].year} ${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>
@@ -99,10 +101,13 @@ function oldestSort() {
                 currPostObj = posts["posts"][i]
                 addfullId = addidName + String(addidNum)
                 $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
+                                                <div  style="display: flex; width: 100%;justify-content: center;gap: 5px;">
+                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${posts["posts"][i].time}')">+</button><h1 style="position: relative;">${posts["posts"][i].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${posts["posts"][i].time}')">-</button>
+                                                </div>
                                                 <h2><b>${posts["posts"][i].title}</b></h2>
-                                                <h3>${posts["posts"][i].year},${posts["posts"][i].time}</h3>
+                                                <h3>${posts["posts"][i].day}/${posts["posts"][i].month}/${posts["posts"][i].year} ${posts["posts"][i].time}</h3>
                                                 <p>${posts["posts"][i].text}</p>
-                                                <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
+                                                <img src="${posts["posts"][i].pathToImage}" width="300px" height="300px">
                                                 <h3>${posts["posts"][i].userPosted}</h3>
                                                 </div>` );
                 addidNum = addidNum + 1
@@ -151,12 +156,15 @@ function alphaTitleSort() {
                 if (posts["posts"][k].title.toLowerCase() == currentSortedTitle) {
                     addfullId = addidName + String(addidNum)
                     $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
-                    <h2><b>${posts["posts"][k].title}</b></h2>
-                    <h3>${posts["posts"][k].year},${posts["posts"][k].time}</h3>
-                    <p>${posts["posts"][k].text}</p>
-                    <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
-                    <h3>${posts["posts"][k].userPosted}</h3>
-                    </div>`);
+                                                <div  style="display: flex; width: 100%;justify-content: center;gap: 5px;">
+                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${posts["posts"][k].time}')">+</button><h1 style="position: relative;">${posts["posts"][k].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${posts["posts"][k].time}')">-</button>
+                                                </div>
+                                                <h2><b>${posts["posts"][k].title}</b></h2>
+                                                <h3>${posts["posts"][k].day}/${posts["posts"][k].month}/${posts["posts"][k].year} ${posts["posts"][k].time}</h3>
+                                                <p>${posts["posts"][k].text}</p>
+                                                <img src="${posts["posts"][k].pathToImage}" width="300px" height="300px">
+                                                <h3>${posts["posts"][k].userPosted}</h3>
+                                                </div>` );
                     addidNum = addidNum + 1
                     posts["posts"].splice(k,1)
                 }
@@ -207,15 +215,18 @@ function alphaUserSort() {
                 if (posts["posts"][k].userPosted.toLowerCase() == currentSortedTitle) {
                     addfullId = addidName + String(addidNum)
                     $( ".main-container" ).append( `<div class="posts" id=${addfullId}>
-                    <h2><b>${posts["posts"][k].title}</b></h2>
-                    <h3>${posts["posts"][k].year},${posts["posts"][k].time}</h3>
-                    <p>${posts["posts"][k].text}</p>
-                    <img src="${posts["posts"][i].pathToImage}" width="200px" height="200px">
-                    <h3>${posts["posts"][k].userPosted}</h3>
-                    </div>`);
+                                                <div  style="display: flex; width: 100%;justify-content: center;gap: 5px;">
+                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${posts["posts"][k].time}')">+</button><h1 style="position: relative;">${posts["posts"][k].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${posts["posts"][k].time}')">-</button>
+                                                </div>
+                                                <h2><b>${posts["posts"][k].title}</b></h2>
+                                                <h3>${posts["posts"][k].day}/${posts["posts"][k].month}/${posts["posts"][k].year} ${posts["posts"][k].time}</h3>
+                                                <p>${posts["posts"][k].text}</p>
+                                                <img src="${posts["posts"][k].pathToImage}" width="300px" height="300px">
+                                                <h3>${posts["posts"][k].userPosted}</h3>
+                                                </div>` );
                     addidNum = addidNum + 1
                     posts["posts"].splice(k,1)
-                } 
+                }k
             }
         }
     } else {

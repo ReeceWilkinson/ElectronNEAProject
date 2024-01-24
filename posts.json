@@ -26,27 +26,15 @@
         },
         {
             "id": 2,
-            "title": "rapist",
-            "text": "RAPIST ON THE LOOSE WATCH YOUR KIDS",
+            "title": "mr grame fee",
+            "text": "the best maths teacher",
             "year": 2024,
             "month": 1,
-            "day": 5,
-            "time": "00:16:40",
+            "day": 10,
+            "time": "15:03:44",
             "userPosted": "admin",
             "votes": 0,
-            "pathToImage": "C:\\Users\\reece\\Downloads\\IMG_3040.jpg"
-        },
-        {
-            "id": 3,
-            "title": "testing",
-            "text": "testing the ids",
-            "year": 2024,
-            "month": 1,
-            "day": 6,
-            "time": "12:48:48",
-            "userPosted": "admin",
-            "votes": 0,
-            "pathToImage": "C:\\Users\\reece\\Downloads\\blue phase.png"
+            "pathToImage": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\ElectronNEAProject\\userImages\\graeme feeeeeeee.jpg"
         }
     ]
 }
