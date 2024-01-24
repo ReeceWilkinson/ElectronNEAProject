@@ -5,18 +5,40 @@ function upVote(postTime) {
 
     let posts = JSON.parse(postsjson);
 
-    console.log(posts)
 
     oldPostObj = null
 
+    NewpostObj = {}
+
     for (i = 0; i < posts["posts"].length; i++) {
         if (posts["posts"][i].time == postTime) {
+
             oldPostObj = posts["posts"][i]
-            posts["posts"].splice(i,1);
-        } else {
-            
+
+            var NewpostObj = {
+                id: oldPostObj.id,
+                title: oldPostObj.title,   
+                text: oldPostObj.text,
+                year: oldPostObj.year,
+                month: oldPostObj.month,
+                day: oldPostObj.day,
+                time: oldPostObj.time,
+                userPosted: oldPostObj.userPosted,
+                votes: oldPostObj.votes + 1,
+                pathToImage: oldPostObj.pathToImage
+            }
+
+            posts["posts"].splice(i,1)
         }
     }
+
+    posts["posts"].push(NewpostObj)
+
+    postsJson = JSON.stringify(posts);
+    
+    fs.writeFileSync("posts.json", postsJson, "utf-8");
+
+    document.location.href='./index.html'
 }
 
 function downVote(postTime) {
@@ -24,12 +46,39 @@ function downVote(postTime) {
 
     let posts = JSON.parse(postsjson);
 
+
+    oldPostObj = null
+
+    NewpostObj = {}
+
     for (i = 0; i < posts["posts"].length; i++) {
         if (posts["posts"][i].time == postTime) {
-            console.log('foudn it')
-        } else {
-            console.log('not found it')
+
+            oldPostObj = posts["posts"][i]
+
+            var NewpostObj = {
+                id: oldPostObj.id,
+                title: oldPostObj.title,   
+                text: oldPostObj.text,
+                year: oldPostObj.year,
+                month: oldPostObj.month,
+                day: oldPostObj.day,
+                time: oldPostObj.time,
+                userPosted: oldPostObj.userPosted,
+                votes: oldPostObj.votes - 1,
+                pathToImage: oldPostObj.pathToImage
+            }
+
+            posts["posts"].splice(i,1)
         }
     }
+
+    posts["posts"].push(NewpostObj)
+
+    postsJson = JSON.stringify(posts);
+    
+    fs.writeFileSync("posts.json", postsJson, "utf-8");
+    
+    document.location.href='./index.html'
 
 }
