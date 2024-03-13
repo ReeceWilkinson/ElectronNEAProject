@@ -32,9 +32,9 @@ function searching() {
         addidName = 'post'
         for (i = 0; i < foundPosts.length; i++) {
             addfullId = addidName + String(addidNum)
-            $( ".main-container" ).prepend( `<div class="posts" id=${addfullId}>
+            $( ".main-container" ).prepend( `<div class="posts">
                                                 <div  style="display: flex; width: 100%;justify-content: center;gap: 5px;">
-                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${foundPosts[i].time}')">+</button><h1 style="position: relative;">${foundPosts[i].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${foundPosts[i].time}')">-</button>
+                                                <button type="submit" id="votingButton" style="position: relative;" onclick="upVote('${foundPosts[i].time}',${addfullId})">+</button><h1 style="position: relative;" id=${addfullId}>${foundPosts[i].votes}</h1><button type="submit" id="votingButton" style="position: relative;" onclick="downVote('${foundPosts[i].time}',${addfullId})">-</button>
                                                 </div>
                                                 <h2><b>${foundPosts[i].title}</b></h2>
                                                 <h3>${foundPosts[i].day}/${foundPosts[i].month}/${foundPosts[i].year} ${foundPosts[i].time}</h3>
@@ -43,7 +43,7 @@ function searching() {
                                                 <h3>${foundPosts[i].userPosted}</h3>
                                                 </div>` );
             addidNum = addidNum + 1
-    } s
+    }
     } else {
         $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts with that username or title.</h1></div>')

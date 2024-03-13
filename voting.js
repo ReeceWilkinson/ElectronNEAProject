@@ -1,10 +1,9 @@
 const { post } = require("jquery");
 
-function upVote(postTime) {
+function upVote(postTime,postID) {
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
     let posts = JSON.parse(postsjson);
-
 
     oldPostObj = null
 
@@ -17,7 +16,7 @@ function upVote(postTime) {
 
             var NewpostObj = {
                 id: oldPostObj.id,
-                title: oldPostObj.title,   
+                title: oldPostObj.title, 
                 text: oldPostObj.text,
                 year: oldPostObj.year,
                 month: oldPostObj.month,
@@ -32,16 +31,16 @@ function upVote(postTime) {
         }
     }
 
+    document.getElementById(postID.id).innerHTML = NewpostObj.votes
+
     posts["posts"].push(NewpostObj)
 
     postsJson = JSON.stringify(posts);
     
     fs.writeFileSync("posts.json", postsJson, "utf-8");
-
-    document.location.href='./index.html'
 }
 
-function downVote(postTime) {
+function downVote(postTime,postID) {
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
     let posts = JSON.parse(postsjson);
@@ -73,12 +72,12 @@ function downVote(postTime) {
         }
     }
 
+    document.getElementById(postID.id).innerHTML = NewpostObj.votes
+
     posts["posts"].push(NewpostObj)
 
     postsJson = JSON.stringify(posts);
     
     fs.writeFileSync("posts.json", postsJson, "utf-8");
-    
-    document.location.href='./index.html'
 
 }
