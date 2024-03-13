@@ -81,6 +81,8 @@ function newestSort() {
                 }
             }
         }
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
 
@@ -137,6 +139,8 @@ function oldestSort() {
                 }
             }
         }
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
 
@@ -266,10 +270,10 @@ function votesSortASC() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    document.getElementById("sortbuttonID").innerHTML = "Sort: Votes Ascending";
-    document.getElementById("sortbuttonID").style.width = "150px";
-    document.getElementById("sortContainer").style.left = "823px";
-    document.getElementById("dropdown-content").style.width = "150px";
+    document.getElementById("sortbuttonID").innerHTML = "Sort: Votes (Asc)";
+    document.getElementById("sortbuttonID").style.width = "200px";
+    document.getElementById("sortContainer").style.left = "773px";
+    document.getElementById("dropdown-content").style.width = "200px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -311,6 +315,8 @@ function votesSortASC() {
                 }
             }
         }
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
 
@@ -324,10 +330,10 @@ function votesSortDSC() {
      * 
      * returns nothing as it simply just adds the html code to the page using all of the backend data.
      */
-    document.getElementById("sortbuttonID").innerHTML = "Sort: Votes Ascending";
-    document.getElementById("sortbuttonID").style.width = "150px";
-    document.getElementById("sortContainer").style.left = "823px";
-    document.getElementById("dropdown-content").style.width = "150px";
+    document.getElementById("sortbuttonID").innerHTML = "Sort: Votes (Desc)";
+    document.getElementById("sortbuttonID").style.width = "200px";
+    document.getElementById("sortContainer").style.left = "773px";
+    document.getElementById("dropdown-content").style.width = "200px";
 
     let postsjson = fs.readFileSync("posts.json", "utf-8");
 
@@ -369,5 +375,7 @@ function votesSortDSC() {
                 }
             }
         }
+    } else {
+        $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
