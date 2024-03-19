@@ -82,6 +82,7 @@ function newestSort() {
             }
         }
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
@@ -140,6 +141,7 @@ function oldestSort() {
             }
         }
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
@@ -197,6 +199,7 @@ function alphaTitleSort() {
             }
         }
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
@@ -256,6 +259,7 @@ function alphaUserSort() {
             }
         }
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
@@ -316,6 +320,7 @@ function votesSortASC() {
             }
         }
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
@@ -376,6 +381,7 @@ function votesSortDSC() {
             }
         }
     } else {
+        $('.main-container').empty();
         $(".main-container").append('<div class="posts"><h1>No posts to display.</h1></div>')
     }
 }
