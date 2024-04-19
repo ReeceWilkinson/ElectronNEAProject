@@ -1,4 +1,1 @@
-{
-    "posts": [
-    ]
-}
+{"posts":[{"id":0,"title":"testing","text":"testing storage","year":2024,"month":4,"day":15,"time":"10:28:35","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\Downloads\\Image.jpg"},{"id":1,"title":"testing 2 ","text":"testing post storage","year":2024,"month":4,"day":15,"time":"10:28:48","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\Downloads\\648C2D8D-212D-47FD-AECF-690E3FD5CA43.jpg"},{"id":2,"title":"test 3","text":"testing post saving","year":2024,"month":4,"day":15,"time":"10:29:14","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\Downloads\\random cat image.jpg"},{"id":3,"title":"real","text":"this is a test to make a post with no image","year":2024,"month":4,"day":15,"time":"10:37:34","userPosted":"admin","votes":0,"pathToImage":"C:\\Users\\reece\\Downloads\\Image.jpg"}]}
