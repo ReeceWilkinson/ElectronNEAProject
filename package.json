@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/plugin-webpack": "^6.4.2",
-    "electron": "^25.8.0",
+    "electron": "^25.9.8",
     "electron-builder": "^24.6.4",
     "electron-packager": "^17.1.2"
   },
